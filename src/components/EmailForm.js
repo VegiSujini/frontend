@@ -51,15 +51,17 @@ const EmailForm = ({ onSend }) => {
             <h3>Select Vendors to Send Email</h3>
             {vendors.map(vendor => (
                 <div key={vendor.email}>
+                     <label>
                     <input
                         type="checkbox"
                         value={vendor.email}
                         onChange={handleChange}
                     />
                     {vendor.name} ({vendor.email})
+                    </label>
                 </div>
             ))}
-            <button type="submit">Send Email</button>
+            <button type="submit">Send Emails</button>
         </form>
     );
 };
